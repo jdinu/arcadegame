@@ -1,6 +1,28 @@
-frontend-nanodegree-arcade-game
-===============================
+# Arcade Game Project
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Table of Contents
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* [Instructions to play the Game](#Instructions to play the Game)
+* [How to Play](#How to Play)
+* [Technologies Used](#instructions)
+* [References](#references)
+
+
+## How to Play the Game
+
+- Open the Arcade Game in the browser through the URL "https://jdinu.github.io/arcadegame/"
+- There are bugs moving from one end of the board to the other end.
+- The player sprite is located at the center of the board.
+- Using the arrow keys,the player can be moved up,down,left and right.
+- If the player hit a bug, the player will be brought back to the original position.
+- You will win the game, if you move the player to the top without hitting any bugs.
+
+## Technologies Used
+- Object Oriented Java Script
+- CSS
+- HTML
+
+## References
+- The engine and resources javascript was given by Udacity Team as the project building framework.
+- Refered "https://www.diigo.com/outliner/fj3m65/Udacity-Classic-Arcade-Game-Project-(project-%233)?key=al7ek43dms"  especially the walkhthrough of 'MATTHEW CRANFORD'.
+- Udacity Mentoring Team and collegues were much helpful.
