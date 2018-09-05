@@ -75,16 +75,10 @@ var Engine = (function(global) {
          * function again as soon as the browser is able to draw another frame.
          */
         if(player.winner === true){
+            //alert('winner');
             win.cancelAnimationFrame(id); 
-            modal.classList.toggle('hide');
-           
-           // $("#modal").modal("show");
-            //$("#modal").modal("hide");
-           
-           // document.getElementById("modal").showModal();           
-           // $("#modal").modal("show");
-           
-          
+            modal.classList.toggle('hide');          
+                  
         }
         else{
             id = win.requestAnimationFrame(main);
