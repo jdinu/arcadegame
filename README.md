@@ -2,8 +2,8 @@
 
 ## Table of Contents
 
-* [Instructions to play the Game](#Instructions to play the Game)
-* [How to Play](#How to Play)
+* [Instructions to play the Game](#instructions to play the Game)
+* [How to Play](#how to Play)
 * [Technologies Used](#instructions)
 * [References](#references)
 
