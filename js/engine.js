@@ -25,12 +25,6 @@ var Engine = (function(global) {
         lastTime,
         id;
       
-
-    //const modal = document.querySelector('.modal_bg');
-    //const replay = document.querySelector('.modal_button');
-    // var el = document.getElementById('modal');
-    // if(el){  
-    // }
      
      const modal = document.querySelector('.modal_bg');
      const replay = document.querySelector('.modal_button');
@@ -75,7 +69,7 @@ var Engine = (function(global) {
          * function again as soon as the browser is able to draw another frame.
          */
         if(player.winner === true){
-            //alert('winner');
+            //Stop the game and show the dialog
             win.cancelAnimationFrame(id); 
             modal.classList.toggle('hide');            
             }
