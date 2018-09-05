@@ -77,10 +77,9 @@ var Engine = (function(global) {
         if(player.winner === true){
             //alert('winner');
             win.cancelAnimationFrame(id); 
-            modal.classList.toggle('hide');          
-                  
-        }
-        else{
+            modal.classList.toggle('hide');            
+            }
+        else {
             id = win.requestAnimationFrame(main);
         }
    
