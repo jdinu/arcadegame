@@ -22,8 +22,27 @@ var Engine = (function(global) {
         win = global.window,
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
-        lastTime;
+        lastTime,
+        id;
+      
 
+    //const modal = document.querySelector('.modal_bg');
+    //const replay = document.querySelector('.modal_button');
+    // var el = document.getElementById('modal');
+    // if(el){  
+    // }
+     
+     const modal = document.querySelector('.modal_bg');
+     const replay = document.querySelector('.modal_button');
+     replay.addEventListener('click', function(){
+        modal.classList.toggle('hide');
+        player.reset();
+        player.winner = false;
+        win.requestAnimationFrame(main);
+    });
+    
+
+   
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
@@ -55,7 +74,22 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-        win.requestAnimationFrame(main);
+        if(player.winner === true){
+            win.cancelAnimationFrame(id); 
+            modal.classList.toggle('hide');
+           
+           // $("#modal").modal("show");
+            //$("#modal").modal("hide");
+           
+           // document.getElementById("modal").showModal();           
+           // $("#modal").modal("show");
+           
+          
+        }
+        else{
+            id = win.requestAnimationFrame(main);
+        }
+   
     }
 
     /* This function does some initial setup that should only occur once,
@@ -89,11 +123,12 @@ var Engine = (function(global) {
      * the data/properties related to the object. Do your drawing in your
      * render methods.
      */
-    function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
+    function updateEntities(dt) {      
+       allEnemies.forEach(function(enemy) {
             enemy.update(dt);
         });
-        player.update();
+       player.update();
+       
     }
 
     /* This function initially draws the "game level", it will then call
@@ -148,11 +183,11 @@ var Engine = (function(global) {
     function renderEntities() {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
-         */
+         */        
         allEnemies.forEach(function(enemy) {
             enemy.render();
         });
-
+        
         player.render();
     }
 
